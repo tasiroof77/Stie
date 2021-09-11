@@ -24,7 +24,7 @@ body {
   margin-top: 3rem;
   font-size: 1.8rem;
   animation: obb 1000s;
-  animation-delay: 25s;
+  animation-delay: 20s;
 }
 
 .btn {
@@ -52,7 +52,7 @@ body {
 .collapsible {
   transform: scale(0);
   animation: pop 1000s;
-  animation-delay: 25s;
+  animation-delay: 20s;
 }
 
 .card {
