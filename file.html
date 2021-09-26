@@ -69,47 +69,47 @@
     <section class="card">
       <h2>Click the red link below to download this file:</h2>
       <div>
-        <link rel="stylesheet" href="//vjs.zencdn.net/5.9.2/video-js.css" />
-        <script
-          type="text/javascript"
-          src="//vjs.zencdn.net/5.9.2/video.js"
-        ></script>
-
-        <!-- videojs-vast-vpaid -->
         <link
-          href="//cdn.rawgit.com/MailOnline/videojs-vast-vpaid/master/bin/videojs.vast.vpaid.min.css"
           rel="stylesheet"
+          href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css"
+          type="text/css"
         />
-        <script src="//cdn.rawgit.com/MailOnline/videojs-vast-vpaid/master/bin/videojs_5.vast.vpaid.min.js"></script>
+        <script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
 
-        <!-- viblast -->
-        <script src="//cdn.viblast.com/vb/stable/viblast.js"></script>
-
-        <!-- body -->
-        <video
-          id="vid1"
-          class="video-js vjs-default-skin vjs-big-play-centered"
-          controls
-          autoplay
-          data-setup='{
-      "plugins": {
-              "vastClient": {
-              "adTagUrl": "https://www.videosprofitnetwork.com/watch.xml?key=3d7e5f91773d8d3067fc48659e8482a0",
-              "adsCancelTimeout": 3000,
-              "adsEnabled": true,
-              "preferredTech":"html5",
-              "vpaidFlashLoaderPath": "//github.com/MailOnline/videojs-vast-vpaid/blob/RELEASE/bin/VPAIDFlash.swf?raw=true"
-          }
-      }}'
-          width="640"
-          height="400"
-          data-viblast-key="N8FjNTQ3NDdhZqZhNGI5NWU5ZTI="
-        >
-          <source
-            src="//cdn3.viblast.com/streams/hls/airshow/playlist.m3u8"
-            type="application/x-mpegURL"
-          />
+        <video id="my-video" controls="" style="width: 640px; height: 360px">
+          <source src="videos/eoa.mp4" type="video/mp4" />
         </video>
+
+        <script type="application/javascript">
+          var testVideo = fluidPlayer("my-video", {
+            vastOptions: {
+              adList: [
+                {
+                  roll: "preRoll",
+                  vastTag:
+                    "https://www.videosprofitnetwork.com/watch.xml?key=3d7e5f91773d8d3067fc48659e8482a0",
+                },
+                {
+                  roll: "midRoll",
+                  vastTag:
+                    "https://www.videosprofitnetwork.com/watch.xml?key=3d7e5f91773d8d3067fc48659e8482a0",
+                  timer: 8,
+                },
+                {
+                  roll: "midRoll",
+                  vastTag:
+                    "https://www.videosprofitnetwork.com/watch.xml?key=3d7e5f91773d8d3067fc48659e8482a0",
+                  timer: 10,
+                },
+                {
+                  roll: "postRoll",
+                  vastTag:
+                    "https://www.videosprofitnetwork.com/watch.xml?key=3d7e5f91773d8d3067fc48659e8482a0",
+                },
+              ],
+            },
+          });
+        </script>
       </div>
 
       <a
