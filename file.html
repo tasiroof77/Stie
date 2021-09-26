@@ -69,49 +69,65 @@
     <section class="card">
       <h2>Click the red link below to download this file:</h2>
       <div>
-        <link
-          rel="stylesheet"
-          href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css"
-          type="text/css"
-        />
-        <script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
-
-        <video id="my-video" controls="" style="width: 640px; height: 360px">
+        <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+        <video id="video-id">
           <source src="videos/eoa.mp4" type="video/mp4" />
         </video>
-
-        <script type="application/javascript">
-          var testVideo = fluidPlayer("my-video", {
+        <script>
+          var myFP = fluidPlayer("video-id", {
+            layoutControls: {
+              controlBar: {
+                autoHideTimeout: 3,
+                animated: true,
+                autoHide: true,
+              },
+              htmlOnPauseBlock: {
+                html: null,
+                height: null,
+                width: null,
+              },
+              autoPlay: false,
+              mute: true,
+              allowTheatre: false,
+              playPauseAnimation: false,
+              playbackRateEnabled: false,
+              allowDownload: false,
+              playButtonShowing: true,
+              fillToContainer: true,
+              posterImage: "",
+            },
             vastOptions: {
               adList: [
                 {
                   roll: "preRoll",
                   vastTag:
                     "https://www.videosprofitnetwork.com/watch.xml?key=3d7e5f91773d8d3067fc48659e8482a0",
+                  adText: "",
                 },
                 {
                   roll: "midRoll",
                   vastTag:
                     "https://www.videosprofitnetwork.com/watch.xml?key=3d7e5f91773d8d3067fc48659e8482a0",
-                  timer: 8,
-                },
-                {
-                  roll: "midRoll",
-                  vastTag:
-                    "https://www.videosprofitnetwork.com/watch.xml?key=3d7e5f91773d8d3067fc48659e8482a0",
-                  timer: 10,
+                  adText: "",
                 },
                 {
                   roll: "postRoll",
                   vastTag:
                     "https://www.videosprofitnetwork.com/watch.xml?key=3d7e5f91773d8d3067fc48659e8482a0",
+                  adText: "",
+                },
+                {
+                  roll: "onPauseRoll",
+                  vastTag: "",
+                  adText: "",
                 },
               ],
+              adCTAText: false,
+              adCTATextPosition: "",
             },
           });
         </script>
       </div>
-
       <a
         href="https://www.effectivecpmgate.com/vkthdi7pqx?key=9c649e02e109e398385a3d13b0c8d4fc"
         style="
