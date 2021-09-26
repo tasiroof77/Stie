@@ -10,53 +10,13 @@
     <meta property="og:type" content="website" />
     <title>Download file</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <style type="text/css">
-      .mobileShow {
-        display: none;
-      }
-
-      /* Smartphone Portrait and Landscape */
-      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-        .mobileShow {
-          display: inline;
-        }
-      }
-      .mobileHide {
-        display: inline;
-      }
-
-      /* Smartphone Portrait and Landscape */
-      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-        .mobileHide {
-          display: none;
-        }
-      }
-    </style>
     <script
       type="text/javascript"
       src="//pl16587018.effectivecpmgate.com/ca/e7/12/cae712fb9f8de5f080e8c97cb4f8100d.js"
     ></script>
   </head>
   <body>
-    <div class="mobileShow">
-      <script type="text/javascript">
-        atOptions = {
-          key: "49abbfe5e9c12746b09af7092f44dcee",
-          format: "iframe",
-          height: 50,
-          width: 320,
-          params: {},
-        };
-        document.write(
-          "<scr" +
-            'ipt type="text/javascript" src="http' +
-            (location.protocol === "https:" ? "s" : "") +
-            '://www.highperformancedformats.com/49abbfe5e9c12746b09af7092f44dcee/invoke.js"></scr' +
-            "ipt>"
-        );
-      </script>
-    </div>
-    <div class="mobileHide">
+    <div class="mobileHide" style="width: 100%; max-width: 728px">
       <script type="text/javascript">
         atOptions = {
           key: "100170fb1ec75336fc19d79f9e418221",
@@ -76,6 +36,24 @@
     </div>
     <header>
       <h1>Watching and Download MP4 file:</h1>
+      <div class="mobileShow">
+        <script type="text/javascript">
+          atOptions = {
+            key: "49abbfe5e9c12746b09af7092f44dcee",
+            format: "iframe",
+            height: 50,
+            width: 320,
+            params: {},
+          };
+          document.write(
+            "<scr" +
+              'ipt type="text/javascript" src="http' +
+              (location.protocol === "https:" ? "s" : "") +
+              '://www.highperformancedformats.com/49abbfe5e9c12746b09af7092f44dcee/invoke.js"></scr' +
+              "ipt>"
+          );
+        </script>
+      </div>
     </header>
     <section class="block">
       <div id="app"></div>
