@@ -2,32 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
+    <link href="http://vjs.zencdn.net/4.7.1/video-js.css" rel="stylesheet" />
+    <link href="css/videojs.ads.css" rel="stylesheet" type="text/css" />
+    <link href="css/videojs.vast.css" rel="stylesheet" type="text/css" />
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Download file</title>
     <link rel="stylesheet" href="css/styles.css" />
     <style type="text/css">
-      .mobileShow {
+      .mobileHide {
         display: none;
       }
-
       /* Smartphone Portrait and Landscape */
-      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-        .mobileShow {
+      @media screen and (min-width: 768px) {
+        .mobileHide {
           display: inline;
         }
-      }
-      .mobileHide {
-        display: inline;
-      }
-
-      /* Smartphone Portrait and Landscape */
-      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-        .mobileHide {
+        .mobileShow {
           display: none;
         }
       }
     </style>
+
+    <script src="http://vjs.zencdn.net/4.7.1/video.js"></script>
+    <script src="js/videojs.ads.js"></script>
+    <script src="js/vast-client.js"></script>
+    <script src="js/videojs.vast.js"></script>
   </head>
   <body>
     <div class="mobileShow">
@@ -69,45 +71,19 @@
     <section class="card">
       <h2>Click the red link below to download this file:</h2>
       <div>
-        <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
-<video id="video-id"><source src="videos/toto.mp4" type="video/mp4" />
-<script>
-    var myFP = fluidPlayer(
-        'video-id',	{
-	"layoutControls": {
-		"controlBar": {
-			"autoHideTimeout": 3,
-			"animated": true,
-			"autoHide": true
-		},
-		"htmlOnPauseBlock": {
-			"html": null,
-			"height": null,
-			"width": null
-		},
-		"autoPlay": false,
-		"mute": true,
-		"allowTheatre": false,
-		"playPauseAnimation": false,
-		"playbackRateEnabled": false,
-		"allowDownload": false,
-		"playButtonShowing": true,
-		"fillToContainer": true,
-		"posterImage": ""
-	},
-	"vastOptions": {
-		"adList": [
-			{
-				"roll": "preRoll",
-				"vastTag": "https://www.videosprofitnetwork.com/watch.xml?key=3d7e5f91773d8d3067fc48659e8482a0",
-				"adText": ""
-			}
-		],
-		"adCTAText": false,
-		"adCTATextPosition": ""
-	}
-})
-</script>
+        <video
+          id="vid1"
+          class="video-js vjs-default-skin"
+          controls
+          preload="auto"
+          poster="image/pexel.jpg"
+          data-setup="{}"
+          width="640"
+          height="400"
+        >
+          <source src="videos/eoa.mp4" type="video/mp4" />
+          <p>Video Playback Not Supported</p>
+        </video>
       </div>
       <a
         href="https://www.effectivecpmgate.com/vkthdi7pqx?key=9c649e02e109e398385a3d13b0c8d4fc"
@@ -130,5 +106,15 @@
       type="text/javascript"
       src="//pl16587003.effectivecpmgate.com/36/d2/db/36d2dbc77ebe884c2a3404b888c9723d.js"
     ></script>
+    <script>
+      var vid1 = videojs("vid1");
+
+      vid1.muted(true);
+      vid1.ads();
+      vid1.vast({
+        url:
+          "https://www.videosprofitnetwork.com/watch.xml?key=3d7e5f91773d8d3067fc48659e8482a0",
+      });
+    </script>
   </body>
 </html>
